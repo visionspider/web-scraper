@@ -18,7 +18,6 @@ const scrapeProduct = async (url) => {
   const txt2 = await el3.getProperty("textContent");
 
   const price = await txt2.jsonValue();
-
   console.log({ imgURL, title, price });
 
   browser.close();
