@@ -16,6 +16,7 @@ const scrapeProduct = async (url) => {
     '//*[@id="corePriceDisplay_desktop_feature_div"]/div[1]/span/span[2]'
   );
   const txt2 = await el3.getProperty("textContent");
+
   const price = await txt2.jsonValue();
 
   console.log({ imgURL, title, price });
